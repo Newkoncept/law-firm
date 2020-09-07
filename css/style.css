@@ -1,0 +1,643 @@
+/*
+  Theme Name: Law Firm (Single Page)
+  Theme URL: https://figma.com/file/LZvkOzYu3tuIxFZvIlSu9c/Law-Firm-(Single-Page)?node-id=0%3A1;
+  Author: Taiwo Oluwagbemiga
+  Version: 1.0
+*/
+
+
+/*--------------------------------------------------------------
+# GENERAL STYLING
+--------------------------------------------------------------*/
+body {
+    background: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif
+}
+a {
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    padding:0;
+}
+section{
+    margin-bottom: 70px;
+}
+p{
+    font-size: 17px;
+}
+
+
+/*--------------------------------------------------------------
+# CLASS STYLES
+--------------------------------------------------------------*/
+
+/* Image container for the images with background image (About and Team 1 )
+--------------------------------*/
+.image-container {
+    position: relative;
+    max-width: 450px;
+    height: 500px;
+}
+.image-container .imageOne {
+    width: 90%;
+    height: 100%;
+}
+.image-container .imageTwo {
+    width: 95%;
+    height: 100%;
+    position: absolute;
+    top: 7%;
+    left: 8%;
+}
+
+/* Back to Top Button 
+--------------------------------*/
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: linear-gradient(45deg, #AE6A4C, #9B4822);
+    color: #fff;
+    padding: 2px 20px 8px 20px;
+    font-size: 16px;
+    border-radius: 4px 4px 0 0;
+    right: 15px;
+    bottom: 0;
+    transition: none;
+}
+.back-to-top:focus {
+    background: linear-gradient(45deg, #AE6A4C, #9B4822);
+    color: #fff;
+    outline: none;
+}
+.back-to-top:hover {
+    background: #97421a;
+    color: #fff;
+}
+
+/* General Class Styling
+--------------------------------*/
+/* Used for positioning items to a fixed place */
+.fixed {
+    position: fixed;
+    top: 40px;
+    right: 0;
+    left: 0;
+    z-index: 1230;
+}
+
+.display{
+    display:none;
+}
+
+
+/*--------------------------------------------------------------
+    HEADER STYLING
+--------------------------------------------------------------*/
+
+/* HEADING SHAPES
+--------------------------------*/
+.color{
+    max-width:100%;
+    background:rgba(255, 255, 255, 0.151);
+}
+.first-shape, .second-shape{
+    width:50%;
+    height:40px;
+    color:#fff;
+    transform: skew(-20deg );
+}
+.first-shape{
+    float:left;
+    background: #9B4822;
+    margin-left:-6px; 
+}
+.second-shape{
+    float:right;
+    background: #240606;
+    margin-right:-6px
+}
+.first-shape p, .second-shape p{
+    padding:5px 40px;
+}
+.color span{
+    padding-right:10px;
+
+}
+
+/* NAVIGATION BAR
+--------------------------------*/
+#header{
+    transition: all 0.5s;
+    background: #e5e5e53f;
+    width:100%;
+}
+#header.header-fixed {
+    transition: all 0.5s;
+    top:0;
+    background:#e5e5e5 !important;
+}
+nav .logo-text{
+    color:#9B4822;
+    font-weight: 500;
+}
+nav.navbar-light .navbar-nav .nav-item a.nav-link.active{
+    color:#9B4822 !important;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+nav.navbar-light .navbar-nav .nav-link{
+    color:#240606 !important;
+    font-weight: 400;
+    transition: all 0.3s;
+
+}
+nav.navbar-light .navbar-nav .nav-link:hover{
+    color:#9B4822 !important;
+}
+
+
+/*--------------------------------------------------------------
+    SECTION STYLING
+--------------------------------------------------------------*/
+/* Sections Header
+--------------------------------*/
+.section-header{
+    text-align: center;
+}
+.section-title{
+    color:#9B4822;
+    text-transform: uppercase;
+    font-size: 27px;
+}
+.section-divider{
+    display: block;
+    width:35px;
+    height:2px;
+    background:#9B4822;
+    margin:0 auto 30px;
+}
+
+/* HERO
+--------------------------------*/
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/hero.png");
+    background-size: cover;
+    background-position: bottom right;
+    margin-bottom:40px;
+}
+#hero .hero-text {
+    background:rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding-top: 35vh;
+    color:#fff;
+}
+#hero .hero-text h1 {
+    text-transform: uppercase;
+    font-size: 38px;
+    text-shadow: 4px 2px #9b4822de;
+}
+#hero .hero-text p {
+    text-transform: capitalize;
+    font-size: 25px;
+    word-spacing: 3px;
+    text-shadow: 1px 2px #000000;
+}
+#hero .hero-text a {
+    background: #AE6A4C;
+    border-radius: 0;
+    color:inherit;
+    transition: .3s;
+}
+#hero .hero-text a:hover {
+    background: #9B4822;
+    transition: .5s;
+}
+
+/* HERO BOTTOM 
+--------------------------------*/
+#hero-bottom .row{
+    text-align: center;
+    margin:0 auto;
+}
+#hero-bottom .card-col{
+    background: #FFFEFD;
+    padding:30px 40px 10px 40px;
+    box-shadow: 0px 1px 2px 1px lightgray;
+}
+#hero-bottom img.hb-img{
+    width:60px;
+    margin-bottom: 10px;
+}
+#hero-bottom .hb-heading{
+    font-size:20px;
+    font-weight: 500;
+}
+
+/* ABOUT SECTION
+--------------------------------*/
+#about{
+    padding-bottom:35px;
+}
+#about .section-header{
+    text-align: left;
+    margin-top: 50px;
+}
+#about .section-title{
+    font-size: 24px;
+}
+#about .section-divider{
+    margin-left:50px;
+}
+#about p{
+    text-align: justify;
+}
+
+/* ABOUT BOTTOM 
+--------------------------------*/
+#about-bottom{
+    background:url("../img/Rectangle\ 156.png");
+    background-size: cover;
+    background-position: bottom right;
+}
+#about-bottom .background{
+    background: rgba(0,0,0,0.56);
+    width:inherit;
+    min-height:300px;
+    text-align: center;
+    padding-top:90px;
+    color:#fff;
+}
+#about-bottom .background img{
+    padding-bottom: 10px;
+}
+#about-bottom .background p{
+    font-weight: 300;
+}
+
+/*  PRACTICE SECTION
+--------------------------------*/
+#practice .img-thumbnail{
+    border:none;
+}
+#practice p{
+    font-weight: 500;
+    padding:10px 5px;
+}
+
+/* PRACTICE BOTTOM
+--------------------------------*/
+#practice-bottom{
+    background: url("../img/Rectangle\ 156.png");
+    background-position: bottom;
+    background-size: cover;
+    min-height: 300px;
+}
+#practice-bottom .background{
+    background: rgba(0,0,0,0.56);
+    min-height: inherit;
+    color: #fff;
+    text-align:center;
+    padding-top:25px
+}
+#practice-bottom .card-col{
+    padding:0 70px;
+}
+#practice-bottom .card-col img{
+    padding-bottom: 25px;
+    width: 80px;
+}
+#practice-bottom .card-col h4{
+    font-weight: 400;
+}
+#practice-bottom .card-col p{
+    font-size: 16px;
+}
+
+/* SERVICES
+--------------------------------*/
+#services .row{
+    max-width: 90%;
+    margin:0 auto;
+}
+#services .card-col{
+    text-align: center;
+    padding:60px 40px;
+    box-shadow:0px 3px 2px 3px rgba(211, 211, 211, 0.8);
+    background: #FFFEFD;
+    margin-bottom: 50px;
+}
+#services img{
+    padding-bottom: 30px;
+}
+#services h4{
+    padding-bottom: 10px;
+}
+#services p{
+    text-align: left;
+}
+
+/* EVALUATION
+--------------------------------*/
+#evaluation{
+    background: #240606;
+    min-height:500px;
+    padding: 30px;
+}
+#evaluation *{
+    color:white;    
+}
+#evaluation .container{
+    background:#250101;
+    width:70%;
+    padding:40px;
+}
+#evaluation input, #evaluation textarea{
+    border-radius: 0;
+    font-size: 17px;
+    font-weight: 400;
+}
+#evaluation a {
+    background: #AE6A4C;
+    border-radius: 0;
+    color:inherit;
+    transition: .3s;
+    font-size: 17px;
+    font-weight: 400;
+}
+#evaluation a:hover {
+    background: #9B4822;
+    transition: .5s;
+}
+
+/* TEAM
+--------------------------------*/
+#team h4{
+    padding-top:45px;
+    padding-bottom: 30px;
+    color:#9B4822;
+    font-size: 20px;
+}
+#team .card-col-first{
+    padding-bottom:35px;
+}
+#team .col-img{
+    width:450px;
+}
+#team .col-img img{
+    width:100%;
+    height:100%;
+}
+
+/* TESTIMONIAL
+--------------------------------*/
+#testimonial .first-bg{
+    background: url("../img/Rectangle\ 156.png");
+    min-height:300px;
+    background-position: bottom right;
+    background-size: cover;
+}
+#testimonial .second-bg{
+    background:rgba(0,0,0,0.56);
+    min-height:300px;
+    color:#fff;
+    padding-top: 80px;
+}
+#testimonial img{
+    width:150px;
+}
+#testimonial p{
+    padding-top:20px;
+    padding-bottom: 50px;
+}
+#testimonial .carousel-indicators li{
+    border-radius: 50%;
+    height:5px;
+    width:20px
+}
+
+/* RECENT NEWS
+--------------------------------*/
+#news .card-img-top{
+    border-radius: 0;
+}
+#news .card-body{
+    padding:20px 35px;
+    background:#9B4822;
+    color:#fff;
+}
+#news .card-title{
+    font-size:18px;
+}
+#news .card-text{
+    text-align: left;
+}
+#news .btn{
+    border-radius: 0;
+    background:none;
+    border:1px solid #fff;
+}
+#news .btn:hover{
+    background:#AE6A4C;
+}
+
+/* NEWS-BOTTOM
+--------------------------------*/
+#news-bottom .card-col{
+    padding:0px 20px;
+}
+#news-bottom h4{
+    font-size: 19px;
+    color:#9B4822;
+}
+#news-bottom p{
+    font-size: 16px;
+}
+#news-bottom .form-group{
+    width:inherit;
+    display: inline-block;
+    border-radius: 0;
+}
+#news-bottom input{
+    border-radius: 0;
+}
+#news-bottom .btn{
+    background: #AE6A4C;
+    border-radius: 0;
+    vertical-align: top;
+    color:#fff;
+    transition: .3s;
+}
+#news-bottom .btn:hover{
+    background: #9B4822;
+    transition: .5s;
+}
+
+/* FOOTER
+--------------------------------*/
+footer section{
+    margin-bottom:0;
+}
+footer{
+    min-height:350px;
+}
+footer .footer-top{
+    min-height:300px;
+    padding:20px 0 10px;
+    background: #FCF9F7;
+}
+footer h4{
+    padding-bottom: 20px;
+}
+footer li{
+    padding-bottom: 15px;
+    transition: .3s;
+}
+footer li:hover{
+    padding-left:10px;
+    zoom:1.1;
+    transition: .5s;
+}
+footer li a{
+    color:#000;
+}
+footer li a:hover{
+    text-decoration: none;
+}
+footer li a span{
+    padding-right:10px;
+    font-size: 16px;
+}
+footer .site-map{
+    width: inherit;
+    height:auto;
+}
+footer .footer-bottom{
+    min-height:50px;
+    background: #240606;
+    text-align: center;
+    color: #fff;
+    padding:10px;
+}
+
+/*--------------------------------------------------------------
+# MEDIA QUERIES
+--------------------------------------------------------------*/
+@media(min-width: 995px){
+    #services .card-col{
+        max-width: calc(50% - 50px);
+    }
+    #services .card-col.card-col-right{
+        margin-right: 100px;
+    }
+}
+
+@media(max-width: 991px){
+    #team .col-img {
+        width:500px;
+        height:440px;
+    }
+    #team h4{
+        padding:15px;
+    }
+}
+
+@media(max-width: 900px){
+    #evaluation .container{
+        width:100%;
+    }
+    #evaluation a{
+        display:block;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 994px) {
+    #services .card-col{
+        max-width: calc(50% - 10px);
+    }
+    #services .card-col.card-col-right{
+        margin-right: 20px;
+    }
+}
+
+@media (min-width:991px){
+    #hero-bottom .row {
+        max-width:80%;
+    }
+}
+
+@media (min-width: 768px){
+    #hero-bottom .card-col {
+        max-width: 29%;
+    }
+    #hero-bottom .card-col.m-left{
+        margin-left:6%;
+    }
+}
+
+@media (max-width: 767px){
+    section{
+        margin-bottom:40px;
+    }
+    #hero-bottom .card-col{
+        margin-bottom: 30px;
+    }
+    #about-bottom {
+        background-position: top left;
+    }
+    #about-bottom .background{
+        padding-bottom: 90px;
+    }
+    #practice .col-md-6{
+        text-align:center;
+    }
+    #practice-bottom .container{
+        padding-top:60px;
+        padding-bottom:100px;
+    }
+    #team .image-container{
+        width:350px;
+        height:350px;
+    }
+    #team .row {
+        margin-bottom: 30px;
+        background:#e1e1e156;
+    }
+    #team .col-img{
+        width: 350px;
+        height:250px;
+    }
+    #testimonial .row{
+        text-align:center;
+    }
+    #news-bottom{
+        margin-bottom:10px;
+    }
+    #news-bottom .card-col{
+        margin-bottom:15px;
+    }
+    footer .row{
+        padding:15px;
+    }
+}
+
+@media(max-width: 520px){
+    .first-shape p, .second-shape p{
+        font-size:10px;
+        padding:7px;
+    }
+    .color span{
+        padding-right: 5px;
+    }
+}
+
+@media(min-width: 425px){
+    #news-bottom .btn{
+        margin-left:-8px;
+    }
+}
